@@ -1,6 +1,23 @@
 
 /**
- *
+ *Generar una solución que permita ingresar jugadores de fútbol; por cada jugador se debe solicitar:
+
+Nombre el jugador
+Posición en el campo de juego
+Edad
+Estatura
+El ciclo de ingreso de información deberá terminar cuando el usuario lo decida.
+Se debe imprimir el siguiente reporte (usar una cadena de acumulación):
+Listado de Jugadores
+1. Alexander Dominguez -Arquero-, edad 32, estatura 1.95
+2. Xavier Arreaga -Defensa-, edad 24, estatura 1.85
+3. Moisés Caicedo -Mediocentro-, edad 19, estatura 1.88
+4. Ángel Mena -Delantero-, edad 32, estatura 1.75
+5. Michael Estrada -Delantero-, edad 27, estatura 1.93
+Promedio de edades:  26.8
+Promedio de estaturas: 1.87
+ * @author PC
+ */
  * @author PC
  */
 import java.util.Scanner;
@@ -74,3 +91,26 @@ public class Problema4 {
         System.out.printf("Promedio de estaturas: %.2f\n", promedioEstatura);
     }
 }
+/**
+ * debug:
+Ingresa el nombre del jugador: Jose Perez
+Ingresa la posicion del jugador: portero
+Ingresa la edad del jugador: 20
+Ingresa la estatura del jugador (en metros): 1,83
+Deseas ingresar otro jugador? (s/n): s
+Ingresa el nombre del jugador: Alex Fernandez
+Ingresa la posicion del jugador: delantero
+Ingresa la edad del jugador: 25
+Ingresa la estatura del jugador (en metros): 1,78
+Deseas ingresar otro jugador? (s/n): n
+
+Listado de Jugadores
+No.   Nombre               Posicion        Edad       Estatura  
+---------------------------------------------------------------
+1     Jose Perez           portero         20         1,83      
+2     Alex Fernandez       delantero       25         1,78      
+
+Promedio de edades: 22,5
+Promedio de estaturas: 1,81
+BUILD SUCCESSFUL (total time: 1 minute 22 seconds)
+ */
