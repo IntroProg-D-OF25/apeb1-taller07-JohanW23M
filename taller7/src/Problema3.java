@@ -23,11 +23,11 @@ public class Problema3 {
         
         while (cont <= 5)
         {
-            System.out.print("Dame Nomb:");
+            System.out.print("Ingresa el nombre del trabajador: ");
             nombreEmp = tcl.next();
-            System.out.print("Dame los dias trabajados:");
+            System.out.print("Ingresa los dias trabajados: ");
             dia = tcl.nextInt();
-            System.out.print("Valor del dia:");
+            System.out.print("Valor del dia: ");
             preciodia = tcl.nextDouble();
             
             System.out.println("NOMBRE\tDIAS\tVALORDIA\tVALORAPAGAR");
@@ -35,5 +35,38 @@ public class Problema3 {
             
             cont ++;
         }
+        System.out.println("");
     }
 }
+
+/**
+ * debug:
+Ingresa el nombre del trabajador: Johan
+Ingresa los dias trabajados: 6
+Valor del dia: 2,4
+NOMBRE	DIAS	VALORDIA	VALORAPAGAR
+Johan	6	2.4		14.399999999999999
+Ingresa el nombre del trabajador: Julio
+Ingresa los dias trabajados: 20
+Valor del dia: 5
+NOMBRE	DIAS	VALORDIA	VALORAPAGAR
+Julio	20	5.0		100.0
+Ingresa el nombre del trabajador: Pedro
+Ingresa los dias trabajados: 30
+Valor del dia: 10
+NOMBRE	DIAS	VALORDIA	VALORAPAGAR
+Pedro	30	10.0		300.0
+Ingresa el nombre del trabajador: Franco
+Ingresa los dias trabajados: 3
+Valor del dia: 5,55
+NOMBRE	DIAS	VALORDIA	VALORAPAGAR
+Franco	3	5.55		16.65
+Ingresa el nombre del trabajador: Josr
+Ingresa los dias trabajados: 7
+Valor del dia: 3,67
+NOMBRE	DIAS	VALORDIA	VALORAPAGAR
+Josr	7	3.67		25.689999999999998
+
+BUILD SUCCESSFUL (total time: 1 minute 39 seconds)
+
+ */
