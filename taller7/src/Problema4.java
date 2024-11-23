@@ -18,8 +18,6 @@ Promedio de edades:  26.8
 Promedio de estaturas: 1.87
  * @author PC
  */
- * @author PC
- */
 import java.util.Scanner;
 
 public class Problema4 {
@@ -27,20 +25,24 @@ public class Problema4 {
         
         Scanner tcl = new Scanner(System.in);
         
-        String[] nombres = new String[100];
-        String[] posiciones = new String[100];
-        int[] edades = new int[100];
-        double[] estaturas = new double[100];
+        String[] nombres = new String[100]; // Arreglo para los nombres
+        String[] posiciones = new String[100]; // Arreglo para las posiciones
+        int[] edades = new int[100]; // Arreglo para las edades
+        double[] estaturas = new double[100]; // Arreglo para las estaturas
         
-        int totalJugadores = 0;
-        int totalEdad = 0;
-        double totalEstatura = 0.0;
+        int totalJugadores = 0; // Contador de jugadores
+        int totalEdad = 0; // Suma total de edades
+        double totalEstatura = 0.0; // Suma total de estaturas
         
         String nombre, posicion;
         int edad;
         double estatura;
         
-        while (true) {
+        String cadenaAcumulada = ""; // Cadena de acumulación para el reporte
+        
+
+        do {
+
             System.out.print("Ingresa el nombre del jugador: ");
             nombre = tcl.nextLine();
             
@@ -53,44 +55,54 @@ public class Problema4 {
             System.out.print("Ingresa la estatura del jugador (en metros): ");
             estatura = tcl.nextDouble();
             
-            // Limpiar el buffer de la entrada
+            // Limpiar el buffer de la entrada para evitar problemas con el siguiente nextLine
             tcl.nextLine();
             
-            // Guardar la información del jugador en los arreglos
+            // Guardar la información en los arreglos
             nombres[totalJugadores] = nombre;
             posiciones[totalJugadores] = posicion;
             edades[totalJugadores] = edad;
             estaturas[totalJugadores] = estatura;
             
-            // Acumular para el cálculo de promedios
+            // Acumular para los promedios
             totalEdad += edad;
             totalEstatura += estatura;
-            totalJugadores++;
             
-            // Preguntar si el usuario desea continuar ingresando jugadores
-            System.out.print("¿Deseas ingresar otro jugador? (s/n): ");
+            // Cadena de acumulación para el reporte
+            cadenaAcumulada += String.format("%-5d %-20s %-15s %-10d %-10.2f\n", 
+                                             totalJugadores + 1, 
+                                             nombres[totalJugadores], 
+                                             posiciones[totalJugadores], 
+                                             edades[totalJugadores], 
+                                             estaturas[totalJugadores]);
+            
+            totalJugadores++; // Incrementar el contador de jugadores
+            
+            // Preguntar si desea ingresar otro jugador
+            System.out.print("Deseas ingresar otro jugador? (s/n): ");
             String continuar = tcl.nextLine();
+            
             if (continuar.equalsIgnoreCase("n")) {
-                break; 
+                break;
             }
-        }
+            
+        } while (true); // Continuar hasta que el usuario decida terminar
         
         double promedioEdad = (double) totalEdad / totalJugadores;
         double promedioEstatura = totalEstatura / totalJugadores;
         
         System.out.println("\nListado de Jugadores");
-        
         System.out.printf("%-5s %-20s %-15s %-10s %-10s\n", "No.", "Nombre", "Posición", "Edad", "Estatura");
         System.out.println("---------------------------------------------------------------");
-
-        for (int i = 0; i < totalJugadores; i++) {
-            System.out.printf("%-5d %-20s %-15s %-10d %-10.2f\n", i + 1, nombres[i], posiciones[i], edades[i], estaturas[i]);
-        }
+        
+        System.out.println(cadenaAcumulada);
 
         System.out.printf("\nPromedio de edades: %.1f\n", promedioEdad);
         System.out.printf("Promedio de estaturas: %.2f\n", promedioEstatura);
     }
 }
+
+
 /**
  * debug:
 Ingresa el nombre del jugador: Jose Perez
