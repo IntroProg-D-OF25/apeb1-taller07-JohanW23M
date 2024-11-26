@@ -102,27 +102,3 @@ public class Problema4 {
     }
 }
 
-
-/**
- * debug:
-Ingresa el nombre del jugador: Jose Perez
-Ingresa la posicion del jugador: portero
-Ingresa la edad del jugador: 20
-Ingresa la estatura del jugador (en metros): 1,83
-Deseas ingresar otro jugador? (s/n): s
-Ingresa el nombre del jugador: Alex Fernandez
-Ingresa la posicion del jugador: delantero
-Ingresa la edad del jugador: 25
-Ingresa la estatura del jugador (en metros): 1,78
-Deseas ingresar otro jugador? (s/n): n
-
-Listado de Jugadores
-No.   Nombre               Posicion        Edad       Estatura  
----------------------------------------------------------------
-1     Jose Perez           portero         20         1,83      
-2     Alex Fernandez       delantero       25         1,78      
-
-Promedio de edades: 22,5
-Promedio de estaturas: 1,81
-BUILD SUCCESSFUL (total time: 1 minute 22 seconds)
- */
